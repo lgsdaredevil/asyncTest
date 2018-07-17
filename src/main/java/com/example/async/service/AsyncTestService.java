@@ -24,7 +24,7 @@ public class AsyncTestService {
     public String requestAnsync(String name){
         try {
             Long start = System.currentTimeMillis();
-            Future<String> result = ansync(name);
+            Future<String> result = asyncTest.ansync(name);
             if (result.isDone()){
                 name = result.get();
                 logger.info("异步方法结束，名字改为：" + name);
